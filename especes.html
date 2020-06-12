@@ -1,0 +1,73 @@
+	<!doctype HTML>
+	<html>
+	    <head>
+	        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	    </head>
+	    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+	    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+	    
+	    
+	    <body style='margin : 0px; overflow: hidden;'>
+	        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; trackingMethod: best'>
+
+	        <!-- Here are our entities: -->
+
+	        <!-- ______________________________________ -->
+	        <!-- _______________My trees_______________ -->
+	        <!-- ______________________________________ -->
+
+	        <!-- Noyer -->
+	        <a-marker  type='pattern' url='https://raw.githubusercontent.com/atallaa/ARPrototype/master/Pattern/pattern-P1.patt'>
+	        	<a-plane scale='2 2 2' rotation='0 0 0' position='0 1 0'
+	    		material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_2.png;
+	    		  transparent:true; opacity:1;alpha-test:0.5
+	   			 "></a-plane>
+	    		<a-plane scale='2 2 2' rotation='0 -90 0' position='0 1 0'
+	    		material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_1.png;
+	   		   transparent:true; opacity:1;alpha-test:0.5
+	   			 "></a-plane>
+	    		<a-plane scale='2 2 2' rotation='-90 0 0' position='0 1 0'
+	   		 material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_0.png;
+	    		  transparent:true; opacity:1;alpha-test:0.5
+	    		"></a-plane>
+	    		<a-plane scale='2 2 2' rotation='0 180 0' position='0 1 0' 
+	    		material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_2.png;
+	     		 transparent:true; opacity:1;alpha-test:0.5; repeat: -1 1
+	    		"></a-plane>
+	    		<a-plane scale='2 2 2' rotation='0 90 0' position='0 1 0' 
+	    			material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_1.png;
+	     		 transparent:true; opacity:1;alpha-test:0.5; repeat: -1 1
+	    		"></a-plane>
+	    		<a-plane scale='2 2 2' rotation='90 0 0' position='0 1 0' 
+	    		material="src:https://raw.githubusercontent.com/atallaa/ARPrototype/master/3DModels/Noyer/Noyer_0020_0.png;
+	      		transparent:true; opacity:1;alpha-test:0.5; repeat: -1 1
+	    		"></a-plane>
+	        </a-marker>
+
+	     	<!-- Sucette 5 -->
+	     	<a-marker  type='pattern' url='https://raw.githubusercontent.com/atallaa/ARPrototype/master/Pattern/pattern-P2.patt'>
+	        	<a-entity gltf-model="url(https://raw.githubusercontent.com/atallaa/ARTest/master/3DModels/lollypop5.glb)" scale="0.2 0.2 0.2">
+	    	</a-marker>
+
+	    	<!-- Ligne arbre -->
+	        <a-marker  type='pattern' url='https://raw.githubusercontent.com/atallaa/ARPrototype/master/Pattern/pattern-P3.patt'>
+	        	<a-entity scale="0.2 0.2 0.2"
+                id="pine"
+                obj-model='obj: url(https://raw.githubusercontent.com/atallaa/ARTest/master/3DModels/LigneArbres/LigneArbres2.obj);
+                mtl: url(https://raw.githubusercontent.com/atallaa/ARTest/master/3DModels/LigneArbres/LigneArbres2.mtl)'>
+	        </a-marker>
+
+	        <!-- Low pol tree -->
+	        <a-marker  type='pattern' url='https://raw.githubusercontent.com/atallaa/ARPrototype/master/Pattern/pattern-P4.patt'>
+	        	<a-entity scale="0.2 0.2 0.2"
+                id="pine"
+                obj-model='obj: url(https://raw.githubusercontent.com/atallaa/ARTest/master/3DModels/lowpoltree/tree.obj);
+                mtl: url(https://raw.githubusercontent.com/atallaa/ARTest/master/3DModels/lowpoltree/tree.mtl)'>
+	        </a-marker>
+	       
+
+	        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+	        <a-entity camera></a-entity>
+	        </a-scene>
+	    </body>
+	</html>
